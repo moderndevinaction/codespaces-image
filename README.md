@@ -8,28 +8,18 @@ A project for creating a dev container that can be used with VS Code's remote de
 
 ```bash
 
-docker build -t ateamsw/devcontainer:latest .
+docker build -t moderndevinaction/devcontainer:latest .
 
-docker push ateamsw/devcontainer:latest
+docker push moderndevinaction/devcontainer:latest
 
-docker run -it --rm ateamsw/devcontainer:latest
-
-```
-
-## Test Locally
-
-```bash
-
-docker build -t ateamsw/devcontainer:local .
-
-docker run -it --rm ateamsw/devcontainer:local
+docker run -it --rm moderndevinaction/devcontainer:latest
 
 ```
 
 ## GitHub Actions
 
-This project uses GitHub Actions and the [`pipeline.yml`](.github/workflows/pipeline.yml) file to build and push
-this image to [Docker Hub](https://hub.docker.com/r/ateamsw/devcontainer).
+This project uses GitHub Actions and the [`publish-container-image.yaml`](.github/workflows/publish-container-image.yml) file to build and push
+this image to the [GitHub Container Registry](https://ghcr.io/moderndevinaction/devcontainer:latest).
 
 ## Follow Up
 
