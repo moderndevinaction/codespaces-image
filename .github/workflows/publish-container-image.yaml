@@ -1,4 +1,4 @@
-name: Docker
+name: Build Dev Container
 
 # This workflow uses actions that are not certified by GitHub.
 # They are provided by a third-party and are governed by
@@ -6,16 +6,11 @@ name: Docker
 # documentation.
 
 on:
-  schedule:
-    - cron: '42 4 * * *'
-
   push:
-    branches: [ main ]
-    # Publish semver tags as releases.
-    tags: [ 'v*.*.*' ]
-
-  pull_request:
-    branches: [ main ]
+    branches:
+      - main
+    paths:
+      - 'Dockerfile'
 
 env:
   # Use docker.io for Docker Hub if empty
