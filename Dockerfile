@@ -106,6 +106,7 @@ RUN az bicep install
 
 # Install Azure Container App Extension (Preview)
 RUN az extension add \
+  --yes \
   --source https://workerappscliextension.blob.core.windows.net/azure-cli-extension/containerapp-0.2.0-py2.py3-none-any.whl
 
 # Install Terraform, tflint, and graphviz
